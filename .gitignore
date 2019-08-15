@@ -3,3 +3,5 @@
 *.suo
 *.sdf
 JuceJs/Builds/VisualStudio2017/Win32/
+JsPlugin/Builds/VisualStudio2017/Win32/
+Win32/Debug/
