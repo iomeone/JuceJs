@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="Vm580G" name="JuceJs" projectType="guiapp" jucerVersion="5.4.3"
-              headerPath="&quot;../../../ThirdParty/v8pp&quot;">
+              headerPath="&quot;../../../ThirdParty/v8pp&quot;;&quot;../../../ThirdParty/v8pp/packages/v8-v141-x86.7.4.288.28/include&quot;;">
   <MAINGROUP id="pWIdY9" name="JuceJs">
     <GROUP id="{C6555415-B677-3EDC-6CAC-5DCECBEEFE40}" name="V8ppWrapper">
       <FILE id="Zxf20J" name="JsModule.cpp" compile="1" resource="0" file="Source/JsModule.cpp"/>
@@ -18,10 +18,8 @@
     <VS2017 targetFolder="Builds/VisualStudio2017">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="1" name="Debug" winArchitecture="Win32" postbuildCommand="copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../Dynamic Library/&quot;&#10;"
-                       headerPath="&quot;../../../ThirdParty/v8pp/packages/v8-v141-x86.7.4.288.28/include&quot;;"
                        libraryPath="&quot;../../../ThirdParty/v8pp/packages/v8-v141-x86.7.4.288.28/lib/Debug&quot;;&#10;&quot;../../../ThirdParty/v8pp/bin/Debug&quot;;"/>
-        <CONFIGURATION isDebug="0" name="Release" winArchitecture="Win32" postbuildCommand="copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../Dynamic Library/&quot;"
-                       headerPath="&quot;../../../ThirdParty/v8pp/packages/v8-v141-x86.7.4.288.28/include&quot;;"
+        <CONFIGURATION isDebug="0" name="Release" winArchitecture="Win32" postbuildCommand="copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../Dynamic Library/&quot;&#10;if not exist &quot;$(TargetDir)plugin&quot; mkdir &quot;$(TargetDir)plugin&quot;"
                        libraryPath="&quot;../../../ThirdParty/v8pp/packages/v8-v141-x86.7.4.288.28/lib/Release&quot;;&#10;&quot;../../../ThirdParty/v8pp/bin/Release&quot;;"/>
       </CONFIGURATIONS>
       <MODULEPATHS>

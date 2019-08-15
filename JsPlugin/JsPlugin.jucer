@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="VCkoQE" name="JsPlugin" projectType="dll" jucerVersion="5.4.3">
+<JUCERPROJECT id="VCkoQE" name="JsPlugin" projectType="dll" jucerVersion="5.4.3"
+              headerPath="&quot;../../../ThirdParty/v8pp&quot;;&quot;../../../ThirdParty/v8pp/packages/v8-v141-x86.7.4.288.28/include&quot;;">
   <MAINGROUP id="HvJvVS" name="JsPlugin">
-    <GROUP id="{E420233D-6D83-BB11-25CD-FD37C683AD43}" name="Source"/>
+    <GROUP id="{E420233D-6D83-BB11-25CD-FD37C683AD43}" name="Source">
+      <FILE id="wVTNbz" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="FfMdr2" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+      <FILE id="pZgm4S" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+    </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>
     <VS2017 targetFolder="Builds/VisualStudio2017">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" winArchitecture="Win32" postbuildCommand="copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../App/&quot;"/>
-        <CONFIGURATION isDebug="0" name="Release" winArchitecture="Win32" postbuildCommand="copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../App/&quot;"/>
+        <CONFIGURATION isDebug="1" name="Debug" winArchitecture="Win32" postbuildCommand="if not exist &quot;$(TargetDir)../App/plugin&quot; mkdir &quot;$(TargetDir)../App/plugin&quot;&#10;copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../App/plugin/&quot;"
+                       libraryPath="&quot;../../../ThirdParty/v8pp/packages/v8-v141-x86.7.4.288.28/lib/Debug&quot;;&#10;&quot;../../../ThirdParty/v8pp/bin/Debug&quot;;"/>
+        <CONFIGURATION isDebug="0" name="Release" winArchitecture="Win32" postbuildCommand="copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../App/plugin/&quot;"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
