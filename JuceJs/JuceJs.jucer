@@ -4,31 +4,6 @@
               headerPath="&quot;../../../ThirdParty/v8pp&quot;">
   <MAINGROUP id="pWIdY9" name="JuceJs">
     <GROUP id="{C6555415-B677-3EDC-6CAC-5DCECBEEFE40}" name="V8ppWrapper">
-      <GROUP id="{92B70555-0A93-9022-9A5F-87E938B30D36}" name="V8pp">
-        <FILE id="Vt3Q0T" name="call_from_v8.hpp" compile="0" resource="0"
-              file="../ThirdParty/v8pp/v8pp/call_from_v8.hpp"/>
-        <FILE id="gRX9lj" name="call_v8.hpp" compile="0" resource="0" file="../ThirdParty/v8pp/v8pp/call_v8.hpp"/>
-        <FILE id="xeux7Y" name="class.cpp" compile="1" resource="0" file="../ThirdParty/v8pp/v8pp/class.cpp"/>
-        <FILE id="MuCTBe" name="class.hpp" compile="0" resource="0" file="../ThirdParty/v8pp/v8pp/class.hpp"/>
-        <FILE id="owGfIQ" name="config.hpp" compile="0" resource="0" file="../ThirdParty/v8pp/v8pp/config.hpp"/>
-        <FILE id="njx5vX" name="context.cpp" compile="1" resource="0" file="../ThirdParty/v8pp/v8pp/context.cpp"/>
-        <FILE id="l4Hq8r" name="context.hpp" compile="0" resource="0" file="../ThirdParty/v8pp/v8pp/context.hpp"/>
-        <FILE id="tVNH0t" name="convert.cpp" compile="1" resource="0" file="../ThirdParty/v8pp/v8pp/convert.cpp"/>
-        <FILE id="fLmYyE" name="convert.hpp" compile="0" resource="0" file="../ThirdParty/v8pp/v8pp/convert.hpp"/>
-        <FILE id="dg4PlR" name="factory.hpp" compile="0" resource="0" file="../ThirdParty/v8pp/v8pp/factory.hpp"/>
-        <FILE id="HJX6XC" name="function.hpp" compile="0" resource="0" file="../ThirdParty/v8pp/v8pp/function.hpp"/>
-        <FILE id="OjR9ce" name="json.cpp" compile="1" resource="0" file="../ThirdParty/v8pp/v8pp/json.cpp"/>
-        <FILE id="i4fqfU" name="json.hpp" compile="0" resource="0" file="../ThirdParty/v8pp/v8pp/json.hpp"/>
-        <FILE id="GSSMK3" name="module.hpp" compile="0" resource="0" file="../ThirdParty/v8pp/v8pp/module.hpp"/>
-        <FILE id="QDAhk2" name="object.hpp" compile="0" resource="0" file="../ThirdParty/v8pp/v8pp/object.hpp"/>
-        <FILE id="ejP4DN" name="packages.config" compile="0" resource="1" file="../ThirdParty/v8pp/v8pp/packages.config"/>
-        <FILE id="kZPrDv" name="persistent.hpp" compile="0" resource="0" file="../ThirdParty/v8pp/v8pp/persistent.hpp"/>
-        <FILE id="HwrmS5" name="property.hpp" compile="0" resource="0" file="../ThirdParty/v8pp/v8pp/property.hpp"/>
-        <FILE id="rRPpV8" name="ptr_traits.hpp" compile="0" resource="0" file="../ThirdParty/v8pp/v8pp/ptr_traits.hpp"/>
-        <FILE id="vqXBwY" name="throw_ex.cpp" compile="1" resource="0" file="../ThirdParty/v8pp/v8pp/throw_ex.cpp"/>
-        <FILE id="L887lf" name="throw_ex.hpp" compile="0" resource="0" file="../ThirdParty/v8pp/v8pp/throw_ex.hpp"/>
-        <FILE id="yLZw4G" name="utility.hpp" compile="0" resource="0" file="../ThirdParty/v8pp/v8pp/utility.hpp"/>
-      </GROUP>
       <FILE id="Zxf20J" name="JsModule.cpp" compile="1" resource="0" file="Source/JsModule.cpp"/>
       <FILE id="YyXLjz" name="JsModule.h" compile="0" resource="0" file="Source/JsModule.h"/>
     </GROUP>

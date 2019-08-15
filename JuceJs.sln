@@ -8,6 +8,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JsPlugin_DynamicLibrary", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugin", "Plugin", "{9059E86C-3C17-43A2-8759-96C6FCD8F89E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "V8pp", "V8pp", "{68080C7E-AE51-412E-8C3F-0DC2E433F43B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "v8pp", "ThirdParty\v8pp\v8pp\v8pp.vcxproj", "{2E6CFC3D-5A08-4909-8D1A-3469063D169B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -28,12 +32,21 @@ Global
 		{B589E4B3-81D9-401A-F45B-3DBB3062B21E}.Release|Win32.ActiveCfg = Release|Win32
 		{B589E4B3-81D9-401A-F45B-3DBB3062B21E}.Release|Win32.Build.0 = Release|Win32
 		{B589E4B3-81D9-401A-F45B-3DBB3062B21E}.Release|x64.ActiveCfg = Release|Win32
+		{2E6CFC3D-5A08-4909-8D1A-3469063D169B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2E6CFC3D-5A08-4909-8D1A-3469063D169B}.Debug|Win32.Build.0 = Debug|Win32
+		{2E6CFC3D-5A08-4909-8D1A-3469063D169B}.Debug|x64.ActiveCfg = Debug|x64
+		{2E6CFC3D-5A08-4909-8D1A-3469063D169B}.Debug|x64.Build.0 = Debug|x64
+		{2E6CFC3D-5A08-4909-8D1A-3469063D169B}.Release|Win32.ActiveCfg = Release|Win32
+		{2E6CFC3D-5A08-4909-8D1A-3469063D169B}.Release|Win32.Build.0 = Release|Win32
+		{2E6CFC3D-5A08-4909-8D1A-3469063D169B}.Release|x64.ActiveCfg = Release|x64
+		{2E6CFC3D-5A08-4909-8D1A-3469063D169B}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B589E4B3-81D9-401A-F45B-3DBB3062B21E} = {9059E86C-3C17-43A2-8759-96C6FCD8F89E}
+		{2E6CFC3D-5A08-4909-8D1A-3469063D169B} = {68080C7E-AE51-412E-8C3F-0DC2E433F43B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CF65879C-C801-4646-9AAE-B9E2C3F95AFD}

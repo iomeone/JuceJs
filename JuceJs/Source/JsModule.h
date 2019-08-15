@@ -2,12 +2,8 @@
 #ifndef	_DLL_JSMODULE_H
 #define _DLL_JSMODULE_H
 
-
-	 
-
 #include <v8.h>
 #include <libplatform/libplatform.h>
-
 #include "v8pp/context.hpp"
 
  void V8_init();
