@@ -2,6 +2,10 @@
 
 <JUCERPROJECT id="Vm580G" name="JuceJs" projectType="guiapp" jucerVersion="5.4.3">
   <MAINGROUP id="pWIdY9" name="JuceJs">
+    <GROUP id="{C6555415-B677-3EDC-6CAC-5DCECBEEFE40}" name="V8ppWrapper">
+      <FILE id="Zxf20J" name="JsModule.cpp" compile="1" resource="0" file="Source/JsModule.cpp"/>
+      <FILE id="YyXLjz" name="JsModule.h" compile="0" resource="0" file="Source/JsModule.h"/>
+    </GROUP>
     <GROUP id="{1EA6E456-28E4-7815-FD1D-848B94FDFE1C}" name="Source">
       <FILE id="vn5TDy" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="gFyDGd" name="MainComponent.cpp" compile="1" resource="0"

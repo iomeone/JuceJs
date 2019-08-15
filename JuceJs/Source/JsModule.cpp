@@ -40,7 +40,7 @@ void V8_init()
 {
   	v8::V8::InitializeICU();
   
-	//platform不能为局部对象，否则编译脚本有问题
+	//platform虏禄脛脺脦陋戮脰虏驴露脭脧贸拢卢路帽脭貌卤脿脪毛陆脜卤戮脫脨脦脢脤芒
   	static std::unique_ptr<v8::Platform> platform(v8::platform::CreateDefaultPlatform());
   	v8::V8::InitializePlatform(platform.get());
   	v8::V8::Initialize();
@@ -150,7 +150,7 @@ void CJsModule::V8_executeFileFunction(const char* strFile, const char* szFuncNa
 
 	Local<Context> context = m_isolate->GetCurrentContext();
 
-	// 关联context
+	// 鹿脴脕陋context
 	Context::Scope context_scope(context);
 
 	Local<Object> gObj = context->Global();
