@@ -1,0 +1,20 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2017
+
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JuceJs - App", "JuceJs_App.vcxproj", "{D4946CD7-5233-2F23-F2CE-15BB3FBED48C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4946CD7-5233-2F23-F2CE-15BB3FBED48C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D4946CD7-5233-2F23-F2CE-15BB3FBED48C}.Debug|Win32.Build.0 = Debug|Win32
+		{D4946CD7-5233-2F23-F2CE-15BB3FBED48C}.Release|Win32.ActiveCfg = Release|Win32
+		{D4946CD7-5233-2F23-F2CE-15BB3FBED48C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
