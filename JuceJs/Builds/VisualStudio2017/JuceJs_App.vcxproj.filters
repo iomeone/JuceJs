@@ -2,6 +2,9 @@
 
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="JuceJs\V8ppWrapper\V8pp">
+      <UniqueIdentifier>{BA41E600-72C8-141F-165F-0A4306EE2E04}</UniqueIdentifier>
+    </Filter>
     <Filter Include="JuceJs\V8ppWrapper">
       <UniqueIdentifier>{ED057EF9-9BE8-7ACE-4422-3932F44221F9}</UniqueIdentifier>
     </Filter>
@@ -400,6 +403,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\ThirdParty\v8pp\v8pp\class.cpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ThirdParty\v8pp\v8pp\context.cpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ThirdParty\v8pp\v8pp\convert.cpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ThirdParty\v8pp\v8pp\json.cpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ThirdParty\v8pp\v8pp\throw_ex.cpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\JsModule.cpp">
       <Filter>JuceJs\V8ppWrapper</Filter>
     </ClCompile>
@@ -2203,6 +2221,9 @@
     <ClCompile Include="..\..\JuceLibraryCode\modules\juce_opengl\juce_opengl.mm">
       <Filter>JUCE Modules\juce_opengl</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData.cpp">
+      <Filter>JUCE Library Code</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_audio_basics.cpp">
       <Filter>JUCE Library Code</Filter>
     </ClCompile>
@@ -2241,6 +2262,54 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\call_from_v8.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\call_v8.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\class.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\config.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\context.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\convert.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\factory.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\function.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\json.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\module.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\object.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\persistent.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\property.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\ptr_traits.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\throw_ex.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ThirdParty\v8pp\v8pp\utility.hpp">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\JsModule.h">
       <Filter>JuceJs\V8ppWrapper</Filter>
     </ClInclude>
@@ -4296,11 +4365,17 @@
     <ClInclude Include="..\..\JuceLibraryCode\AppConfig.h">
       <Filter>JUCE Library Code</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\BinaryData.h">
+      <Filter>JUCE Library Code</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h">
       <Filter>JUCE Library Code</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\ThirdParty\v8pp\v8pp\packages.config">
+      <Filter>JuceJs\V8ppWrapper\V8pp</Filter>
+    </None>
     <None Include="..\..\JuceLibraryCode\modules\juce_audio_formats\codecs\flac\Flac Licence.txt">
       <Filter>JUCE Modules\juce_audio_formats\codecs\flac</Filter>
     </None>

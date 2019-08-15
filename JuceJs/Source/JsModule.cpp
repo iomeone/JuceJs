@@ -4,11 +4,10 @@
 #include "JsModule.h"
 #include <iostream>
 #include <string>
-
+#include <stdarg.h>
 using namespace v8;
 using namespace std;
 
-CJsModule* CJsModule::s_pJsModule = NULL;
 
 CJsModule::CJsModule()
 {
@@ -24,12 +23,6 @@ CJsModule::~CJsModule()
 
 CJsModule* CJsModule::GetInstance()
 {
-// 	if (s_pJsModule == NULL)
-// 	{
-// 		s_pJsModule = new CJsModule();
-// 	}
-// 
-// 	return s_pJsModule;
 	static CJsModule js;
 	return &js;
 }
@@ -37,9 +30,7 @@ CJsModule* CJsModule::GetInstance()
 void V8_init()
 {
   	v8::V8::InitializeICU();
-  
-	//platform²»ÄÜÎª¾Ö²¿¶ÔÏó£¬·ñÔò±àÒë½Å±¾ÓÐÎÊÌâ
-  	static std::unique_ptr<v8::Platform> platform(v8::platform::CreateDefaultPlatform());
+  	static std::unique_ptr<v8::Platform> platform(v8::platform::NewDefaultPlatform());
   	v8::V8::InitializePlatform(platform.get());
   	v8::V8::Initialize();
 }
@@ -56,12 +47,12 @@ T CJsModule::run_script(v8pp::context& context, std::string const& source)
 	v8::Isolate* isolate = context.isolate();
 
 	v8::HandleScope scope(isolate);
-	v8::TryCatch try_catch;
+	v8::TryCatch try_catch(isolate);
 	v8::Handle<v8::Value> result = context.run_script(source);
 	if (try_catch.HasCaught())
 	{
 		std::string const msg = v8pp::from_v8<std::string>(isolate,
-			try_catch.Exception()->ToString());
+			try_catch.Exception()->ToString(isolate));
 		std::cout<<std::endl << msg << std::endl;
 		throw std::runtime_error(msg);
 	}
@@ -182,7 +173,7 @@ void CJsModule::V8_executeFileFunction(const char* strFile, const char* szFuncNa
 					args[i] = obj;
 				}
 
-				fun_execute->Call(gObj, 1, args);
+				fun_execute->Call(context, gObj, 1, args);
 			}
 				break;
 			case 2:
@@ -197,14 +188,14 @@ void CJsModule::V8_executeFileFunction(const char* strFile, const char* szFuncNa
 					args[i] = obj;
 				}
 
-				fun_execute->Call(gObj, 2, args);
+				fun_execute->Call(context, gObj, 2, args);
 			}
 				break;
 			case 0:
 			default:
 			{
 				Local<Value> args[1];
-				fun_execute->Call(gObj, 0, args);
+				fun_execute->Call(context, gObj, 0, args);
 			}
 			break;
 				break;

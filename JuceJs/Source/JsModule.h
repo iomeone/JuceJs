@@ -3,24 +3,18 @@
 #define _DLL_JSMODULE_H
 
 
-#ifdef JSMODULE_EXPORTS
-#define API_JS_MODULE			__declspec(dllexport)
-#else
-#define API_JS_MODULE			__declspec(dllimport)
-#endif
-
-#define API_JS_MODULE_FUN		extern "C" API_JS_MODULE
+	 
 
 #include <v8.h>
 #include <libplatform/libplatform.h>
 
 #include "v8pp/context.hpp"
 
-API_JS_MODULE_FUN void V8_init();
+ void V8_init();
 
-API_JS_MODULE_FUN void V8_uninit();
+ void V8_uninit();
 
-class API_JS_MODULE CJsModule
+class  CJsModule
 {
 public:
 	CJsModule();
@@ -43,7 +37,6 @@ public:
  	v8pp::context*	m_context;
  	v8::Isolate*	m_isolate;
 
-	static CJsModule* s_pJsModule;
  } ;
 
 
