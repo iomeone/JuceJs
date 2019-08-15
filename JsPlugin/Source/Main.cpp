@@ -20,7 +20,10 @@
 #pragma comment (lib, "v8_libplatform.dll.lib")
 #pragma comment (lib, "v8_libbase.dll.lib")
 
-
+void msg(String s)
+{
+	AlertWindow::showMessageBox(AlertWindow::AlertIconType::InfoIcon, "msg", s, "ok");
+}
 namespace console {
 
 	void log(v8::FunctionCallbackInfo<v8::Value> const& args)
@@ -32,8 +35,10 @@ namespace console {
 			if (i > 0) std::cout << ' ';
 			v8::String::Utf8Value const str(args.GetIsolate(), args[i]);
 			std::cout << *str;
+			msg(*str);
 		}
 		std::cout << std::endl;
+		msg("endl");
 	}
 
 	v8::Local<v8::Value> init(v8::Isolate* isolate)
