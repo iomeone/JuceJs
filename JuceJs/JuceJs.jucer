@@ -17,10 +17,10 @@
   <EXPORTFORMATS>
     <VS2017 targetFolder="Builds/VisualStudio2017">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" winArchitecture="Win32" postbuildCommand="copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../&quot;&#10;"
+        <CONFIGURATION isDebug="1" name="Debug" winArchitecture="Win32" postbuildCommand="copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../Dynamic Library/&quot;&#10;"
                        headerPath="&quot;../../../ThirdParty/v8pp/packages/v8-v141-x86.7.4.288.28/include&quot;;"
                        libraryPath="&quot;../../../ThirdParty/v8pp/packages/v8-v141-x86.7.4.288.28/lib/Debug&quot;;&#10;&quot;../../../ThirdParty/v8pp/bin/Debug&quot;;"/>
-        <CONFIGURATION isDebug="0" name="Release" winArchitecture="Win32" postbuildCommand="copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../&quot;"
+        <CONFIGURATION isDebug="0" name="Release" winArchitecture="Win32" postbuildCommand="copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../Dynamic Library/&quot;"
                        headerPath="&quot;../../../ThirdParty/v8pp/packages/v8-v141-x86.7.4.288.28/include&quot;;"
                        libraryPath="&quot;../../../ThirdParty/v8pp/packages/v8-v141-x86.7.4.288.28/lib/Release&quot;;&#10;&quot;../../../ThirdParty/v8pp/bin/Release&quot;;"/>
       </CONFIGURATIONS>

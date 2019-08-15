@@ -100,7 +100,7 @@
       <AdditionalLibraryDirectories>&quot;../../../ThirdParty/v8pp/packages/v8-v141-x86.7.4.288.28/lib/Debug&quot;;&quot;../../../ThirdParty/v8pp/bin/Debug&quot;;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../&quot;
+      <Command>copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../Dynamic Library/&quot;
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -151,7 +151,7 @@
       <AdditionalLibraryDirectories>&quot;../../../ThirdParty/v8pp/packages/v8-v141-x86.7.4.288.28/lib/Release&quot;;&quot;../../../ThirdParty/v8pp/bin/Release&quot;;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../&quot;</Command>
+      <Command>copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../Dynamic Library/&quot;</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
