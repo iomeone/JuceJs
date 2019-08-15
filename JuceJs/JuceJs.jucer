@@ -8,6 +8,8 @@
       <FILE id="YyXLjz" name="JsModule.h" compile="0" resource="0" file="Source/JsModule.h"/>
     </GROUP>
     <GROUP id="{1EA6E456-28E4-7815-FD1D-848B94FDFE1C}" name="Source">
+      <FILE id="Wy6Nap" name="Js.cpp" compile="1" resource="0" file="Source/Js.cpp"/>
+      <FILE id="uZiATP" name="Js.h" compile="0" resource="0" file="Source/Js.h"/>
       <FILE id="vn5TDy" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="gFyDGd" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>

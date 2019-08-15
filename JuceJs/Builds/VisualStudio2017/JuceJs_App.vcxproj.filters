@@ -403,6 +403,9 @@
     <ClCompile Include="..\..\Source\JsModule.cpp">
       <Filter>JuceJs\V8ppWrapper</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Js.cpp">
+      <Filter>JuceJs\Source</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\MainComponent.cpp">
       <Filter>JuceJs\Source</Filter>
     </ClCompile>
@@ -2243,6 +2246,9 @@
   <ItemGroup>
     <ClInclude Include="..\..\Source\JsModule.h">
       <Filter>JuceJs\V8ppWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Js.h">
+      <Filter>JuceJs\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\MainComponent.h">
       <Filter>JuceJs\Source</Filter>

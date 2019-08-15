@@ -27,10 +27,15 @@ CJsModule* CJsModule::GetInstance()
 	return &js;
 }
 
-void V8_init()
+void V8_init(const char * path)
 {
   	v8::V8::InitializeICU();
-  	static std::unique_ptr<v8::Platform> platform(v8::platform::NewDefaultPlatform());
+	v8::V8::InitializeExternalStartupData(path);
+#if V8_MAJOR_VERSION >= 7
+	std::unique_ptr<v8::Platform> platform(v8::platform::NewDefaultPlatform());
+#else
+	std::unique_ptr<v8::Platform> platform(v8::platform::CreateDefaultPlatform());
+#endif
   	v8::V8::InitializePlatform(platform.get());
   	v8::V8::Initialize();
 }

@@ -157,6 +157,7 @@ if not exist &quot;$(TargetDir)plugin&quot; mkdir &quot;$(TargetDir)plugin&quot;
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\JsModule.cpp"/>
+    <ClCompile Include="..\..\Source\Js.cpp"/>
     <ClCompile Include="..\..\Source\MainComponent.cpp"/>
     <ClCompile Include="..\..\Source\Main.cpp"/>
     <ClCompile Include="..\..\JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
@@ -1866,6 +1867,7 @@ if not exist &quot;$(TargetDir)plugin&quot; mkdir &quot;$(TargetDir)plugin&quot;
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\JsModule.h"/>
+    <ClInclude Include="..\..\Source\Js.h"/>
     <ClInclude Include="..\..\Source\MainComponent.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h"/>
