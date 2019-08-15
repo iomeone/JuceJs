@@ -25,6 +25,7 @@
 
 //[MiscUserDefs] You can add your own user definitions and misc code here...
 #include "JsModule.h"
+#include <thread>
 void v8test();
 //[/MiscUserDefs]
 
@@ -95,7 +96,10 @@ void Js::buttonClicked (Button* buttonThatWasClicked)
     if (buttonThatWasClicked == textButton.get())
     {
         //[UserButtonCode_textButton] -- add your button handler code here..
-		v8test();
+		std::thread t([this]() {
+			v8test();
+		});
+		t.detach();
         //[/UserButtonCode_textButton]
     }
 
@@ -112,7 +116,7 @@ void v8test()
 	String s = x.getFullPathName();
 	V8_init(s.toStdString().c_str());
 
-	CJsModule js;
+	static CJsModule js;
 
 	//login
 	std::string src = u8R"(
