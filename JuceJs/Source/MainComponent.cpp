@@ -8,6 +8,7 @@
 
 #include "MainComponent.h"
 
+#include "jsModule.h"
 //==============================================================================
 MainComponent::MainComponent()
 {

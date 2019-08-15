@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="Vm580G" name="JuceJs" projectType="guiapp" jucerVersion="5.4.3">
+<JUCERPROJECT id="Vm580G" name="JuceJs" projectType="guiapp" jucerVersion="5.4.3"
+              headerPath="&quot;../../../ThirdParty/v8pp&quot;">
   <MAINGROUP id="pWIdY9" name="JuceJs">
     <GROUP id="{C6555415-B677-3EDC-6CAC-5DCECBEEFE40}" name="V8ppWrapper">
       <FILE id="Zxf20J" name="JsModule.cpp" compile="1" resource="0" file="Source/JsModule.cpp"/>
