@@ -94,6 +94,10 @@
       <OutputFile>$(IntDir)\JuceJs.bsc</OutputFile>
     </Bscmake>
     <Lib/>
+    <PostBuildEvent>
+      <Command>copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../&quot;
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
@@ -138,6 +142,9 @@
       <OutputFile>$(IntDir)\JuceJs.bsc</OutputFile>
     </Bscmake>
     <Lib/>
+    <PostBuildEvent>
+      <Command>copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../&quot;</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\MainComponent.cpp"/>

@@ -94,6 +94,9 @@
       <OutputFile>$(IntDir)\JsPlugin.bsc</OutputFile>
     </Bscmake>
     <Lib/>
+    <PostBuildEvent>
+      <Command>copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../&quot;</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
@@ -138,6 +141,9 @@
       <OutputFile>$(IntDir)\JsPlugin.bsc</OutputFile>
     </Bscmake>
     <Lib/>
+    <PostBuildEvent>
+      <Command>copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../&quot;</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
