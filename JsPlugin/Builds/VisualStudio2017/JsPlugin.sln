@@ -5,14 +5,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JsPlugin - Dynamic Library"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Release|x64 = Release|x64
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B589E4B3-81D9-401A-F45B-3DBB3062B21E}.Debug|x64.ActiveCfg = Debug|x64
-		{B589E4B3-81D9-401A-F45B-3DBB3062B21E}.Debug|x64.Build.0 = Debug|x64
-		{B589E4B3-81D9-401A-F45B-3DBB3062B21E}.Release|x64.ActiveCfg = Release|x64
-		{B589E4B3-81D9-401A-F45B-3DBB3062B21E}.Release|x64.Build.0 = Release|x64
+		{B589E4B3-81D9-401A-F45B-3DBB3062B21E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B589E4B3-81D9-401A-F45B-3DBB3062B21E}.Debug|Win32.Build.0 = Debug|Win32
+		{B589E4B3-81D9-401A-F45B-3DBB3062B21E}.Release|Win32.ActiveCfg = Release|Win32
+		{B589E4B3-81D9-401A-F45B-3DBB3062B21E}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

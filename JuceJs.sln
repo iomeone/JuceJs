@@ -6,6 +6,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JuceJs_App", "JuceJs\Builds
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JsPlugin_DynamicLibrary", "JsPlugin\Builds\VisualStudio2017\JsPlugin_DynamicLibrary.vcxproj", "{B589E4B3-81D9-401A-F45B-3DBB3062B21E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugin", "Plugin", "{9059E86C-3C17-43A2-8759-96C6FCD8F89E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -29,6 +31,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B589E4B3-81D9-401A-F45B-3DBB3062B21E} = {9059E86C-3C17-43A2-8759-96C6FCD8F89E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CF65879C-C801-4646-9AAE-B9E2C3F95AFD}
