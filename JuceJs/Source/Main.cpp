@@ -13,7 +13,7 @@
 #pragma comment (lib, "v8.dll.lib")
 #pragma comment (lib, "v8_libplatform.dll.lib")
 #pragma comment (lib, "v8_libbase.dll.lib")
-
+#pragma comment (lib, "v8pp.lib")
 
 
 
