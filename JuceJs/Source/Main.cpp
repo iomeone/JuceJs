@@ -10,6 +10,7 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "MainComponent.h"
+#include "JsModule.h"
 #pragma comment (lib, "v8.dll.lib")
 #pragma comment (lib, "v8_libplatform.dll.lib")
 #pragma comment (lib, "v8_libbase.dll.lib")
@@ -32,6 +33,10 @@ public:
     void initialise (const String& commandLine) override
     {
         // This method is where you should put your application's initialisation code..
+		auto x = File::getSpecialLocation(File::SpecialLocationType::currentExecutableFile);
+		String s = x.getFullPathName();
+		if(!V8_init(s.toStdString().c_str()))
+			AlertWindow::showMessageBox(AlertWindow::AlertIconType::InfoIcon, "Error", "Fail to initialize v8 engine!",  "ok");
 
         mainWindow.reset (new MainWindow (getApplicationName()));
     }
@@ -39,6 +44,8 @@ public:
     void shutdown() override
     {
         // Add your application's shutdown code here..
+
+		V8_uninit();
 
         mainWindow = nullptr; // (deletes our window)
     }

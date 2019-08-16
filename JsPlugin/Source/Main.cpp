@@ -22,7 +22,7 @@
 
 void msg(String s)
 {
-	AlertWindow::showMessageBox(AlertWindow::AlertIconType::InfoIcon, "msg", s, "ok");
+		AlertWindow::showMessageBox(AlertWindow::AlertIconType::InfoIcon, "msg", s, "ok");
 }
 namespace console {
 

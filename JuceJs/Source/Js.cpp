@@ -96,10 +96,13 @@ void Js::buttonClicked (Button* buttonThatWasClicked)
     if (buttonThatWasClicked == textButton.get())
     {
         //[UserButtonCode_textButton] -- add your button handler code here..
-		std::thread t([this]() {
-			v8test();
-		});
-		t.detach();
+		
+		//std::thread t([this]() {
+		//	v8test();
+		//});
+		//t.detach();
+
+		v8test();
         //[/UserButtonCode_textButton]
     }
 
@@ -112,21 +115,15 @@ void Js::buttonClicked (Button* buttonThatWasClicked)
 //[MiscUserCode] You can add your own definitions of your custom methods or any other code here...
 void v8test()
 {
-	auto x = File::getSpecialLocation(File::SpecialLocationType::currentExecutableFile);
-	String s = x.getFullPathName();
-	V8_init(s.toStdString().c_str());
-
-	static CJsModule js;
+	CJsModule js;
 
 	//login
 	std::string src = u8R"(
-		var console = require('console');
+		var console = require('JsPlugin');
 		console.log("js work!!!!!!!!!!!!!!!!!!!!!!!");
 	)";
 	try
 	{
-
- 
 		js.V8_execute(src.c_str());
 		//js.V8_executeFile("demo.js");
 	}
@@ -134,7 +131,7 @@ void v8test()
 	{
 		AlertWindow::showMessageBox(AlertWindow::AlertIconType::WarningIcon, "error", msg.what(), "Ok");
 	}
-	//js.V8_executeFile("console.js");
+	
 
 //	std::string strInput;
 //	cin >> strInput;
@@ -143,7 +140,7 @@ void v8test()
 //	js.V8_executeFileFunction("login.js", "captcha_check", "%s", strInput.c_str());
 //	js.V8_executeFileFunction("login.js", "login", "%s|%s", "wang70", "xxx");
 
-	V8_uninit();
+
 }
 //[/MiscUserCode]
 

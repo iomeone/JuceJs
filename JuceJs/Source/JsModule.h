@@ -6,7 +6,7 @@
 #include <libplatform/libplatform.h>
 #include "v8pp/context.hpp"
 
- void V8_init(const char * path);
+ bool V8_init(const char * path);
 
  void V8_uninit();
 
