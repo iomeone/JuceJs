@@ -133,8 +133,9 @@ void v8test()
 	//login
 	std::string src = u8R"(
 		var console = require('JsPlugin');
-		var x = getPoint();
-		console.log(1);
+		console.getPoint();
+		//var dd = x.x;
+		//console.log(dd);
 	)";
 	try
 	{

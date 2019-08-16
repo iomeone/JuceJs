@@ -25,6 +25,8 @@
 class CPoint
 {
 public:
+	int get_x() const { return x; }
+
 	int x;
 	int y;
 	int z;
@@ -32,7 +34,8 @@ public:
 
 CPoint getPoint()
 {
-	return CPoint{ 1, 2, 3 };
+	 return CPoint{ 1, 2, 3 };
+
 }
 
 void msg(String s)
@@ -64,6 +67,7 @@ namespace console {
 		v8pp::class_<CPoint> j_point(isolate);
 		j_point
 			.set("x", &CPoint::x)
+			//.set("prop", v8pp::property(&CPoint::get_x))
 			.set("y", &CPoint::y)
 			.set("z", &CPoint::z)
 			;
@@ -74,7 +78,8 @@ namespace console {
 		m
 			.set("getPoint", &getPoint)
 			.set("log", &log)
-			.set("j_point", j_point);
+			.set("j_point", j_point)
+			;
 			
 
 
