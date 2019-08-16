@@ -13,12 +13,27 @@
 
 #include <iostream>
 #include <v8pp/module.hpp>
+#include <v8pp/class.hpp>
+
 #include <v8pp/config.hpp>
 
 
 #pragma comment (lib, "v8.dll.lib")
 #pragma comment (lib, "v8_libplatform.dll.lib")
 #pragma comment (lib, "v8_libbase.dll.lib")
+
+class CPoint
+{
+public:
+	int x;
+	int y;
+	int z;
+};
+
+CPoint getPoint()
+{
+	return CPoint{ 1, 2, 3 };
+}
 
 void msg(String s)
 {
@@ -43,9 +58,27 @@ namespace console {
 
 	v8::Local<v8::Value> init(v8::Isolate* isolate)
 	{
+		v8::EscapableHandleScope scope(isolate);
+
+
+		v8pp::class_<CPoint> j_point(isolate);
+		j_point
+			.set("x", &CPoint::x)
+			.set("y", &CPoint::y)
+			.set("z", &CPoint::z)
+			;
+
+
+
 		v8pp::module m(isolate);
-		m.set("log", &log);
-		return m.new_instance();
+		m
+			.set("getPoint", &getPoint)
+			.set("log", &log)
+			.set("j_point", j_point);
+			
+
+
+		return scope.Escape(m.new_instance());
 	}
 
 } // namespace console

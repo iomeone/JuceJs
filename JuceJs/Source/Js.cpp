@@ -35,11 +35,17 @@ Js::Js ()
     //[Constructor_pre] You can add your own custom stuff here..
     //[/Constructor_pre]
 
-    textButton.reset (new TextButton ("new button"));
+    textButton.reset (new TextButton ("Compile"));
     addAndMakeVisible (textButton.get());
+    textButton->setButtonText (TRANS("new button"));
     textButton->addListener (this);
 
-    textButton->setBounds (64, 104, 150, 24);
+    textButton->setBounds (24, 16, 150, 24);
+
+    codeEdt.reset (new CodeEditorComponent (doc, nullptr));
+    addAndMakeVisible (codeEdt.get());
+
+    codeEdt->setBounds (24, 64, 704, 568);
 
 
     //[UserPreSize]
@@ -58,6 +64,7 @@ Js::~Js()
     //[/Destructor_pre]
 
     textButton = nullptr;
+    codeEdt = nullptr;
 
 
     //[Destructor]. You can add your own custom destruction code here..
@@ -83,8 +90,14 @@ void Js::resized()
 
     //[UserResized] Add your own custom resize handling here..
 	auto r = getLocalBounds();
-	auto btnr = r.removeFromTop(proportionOfHeight(0.1));
+	auto top = r.removeFromTop(proportionOfHeight(0.06));
+	auto btnr = top.removeFromLeft(proportionOfWidth(0.1));
 	textButton->setBounds(btnr);
+
+	auto left = r.removeFromLeft(proportionOfWidth(0.5));
+	codeEdt->setBounds(left);
+
+
     //[/UserResized]
 }
 
@@ -96,7 +109,7 @@ void Js::buttonClicked (Button* buttonThatWasClicked)
     if (buttonThatWasClicked == textButton.get())
     {
         //[UserButtonCode_textButton] -- add your button handler code here..
-		
+
 		//std::thread t([this]() {
 		//	v8test();
 		//});
@@ -120,7 +133,8 @@ void v8test()
 	//login
 	std::string src = u8R"(
 		var console = require('JsPlugin');
-		console.log("js work!!!!!!!!!!!!!!!!!!!!!!!");
+		var x = getPoint();
+		console.log(1);
 	)";
 	try
 	{
@@ -131,7 +145,7 @@ void v8test()
 	{
 		AlertWindow::showMessageBox(AlertWindow::AlertIconType::WarningIcon, "error", msg.what(), "Ok");
 	}
-	
+
 
 //	std::string strInput;
 //	cin >> strInput;
@@ -159,9 +173,12 @@ BEGIN_JUCER_METADATA
                  snapShown="1" overlayOpacity="0.330" fixedSize="0" initialWidth="600"
                  initialHeight="400">
   <BACKGROUND backgroundColour="ff323e44"/>
-  <TEXTBUTTON name="new button" id="68928f5b961c5727" memberName="textButton"
-              virtualName="" explicitFocusOrder="0" pos="64 104 150 24" buttonText="new button"
+  <TEXTBUTTON name="Compile" id="68928f5b961c5727" memberName="textButton"
+              virtualName="" explicitFocusOrder="0" pos="24 16 150 24" buttonText="new button"
               connectedEdges="0" needsCallback="1" radioGroupId="0"/>
+  <GENERICCOMPONENT name="" id="f7f7d283b1468258" memberName="codeEdt" virtualName=""
+                    explicitFocusOrder="0" pos="24 64 704 568" class="CodeEditorComponent"
+                    params="doc, nullptr"/>
 </JUCER_COMPONENT>
 
 END_JUCER_METADATA

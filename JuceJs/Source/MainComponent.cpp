@@ -15,7 +15,7 @@ MainComponent::MainComponent()
 	jscom.reset(new Js());
 	addAndMakeVisible(jscom.get());
 
-    setSize (600, 400);
+    setSize (1200, 800);
 }
 
 MainComponent::~MainComponent()

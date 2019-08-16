@@ -53,10 +53,12 @@ public:
 
 private:
     //[UserVariables]   -- You can add your own custom variables in this section.
+	CodeDocument doc;
     //[/UserVariables]
 
     //==============================================================================
     std::unique_ptr<TextButton> textButton;
+    std::unique_ptr<CodeEditorComponent> codeEdt;
 
 
     //==============================================================================
